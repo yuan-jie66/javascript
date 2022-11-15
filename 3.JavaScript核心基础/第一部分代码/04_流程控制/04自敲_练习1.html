@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  
+        /* 
+            - 练习1：
+                编写一个程序，获取一个用户输入的整数。然后通过程序显示这个数是奇数还是偶数。
+        */
+
+        // 编写一个程序，获取一个用户输入的整数
+        // let num = +prompt("请输入一个整数")
+        let num = parseInt(prompt("请输入一个整数"))  //parseInt是返还整数
+
+        // 验证一下，用户的输入是否合法，只有是有效数字时，我们才检查它是否是偶数
+        // 我们不能使用==或===来检查一个值是否是NaN
+        // 可以使用isNaN()函数来检查一个值是否是NaN
+        // if(num = NaN){
+        //     alert("num是NaN")
+        // }
+
+        if(isNaN(num) || num % 1 !==0){   //num % 1 !==0  排除小数
+            alert("你输入的有问题，请输入整数")
+        }else{
+            // 然后通过程序显示这个数是奇数还是偶数。
+            if(num % 2 === 0){
+                alert(`${num} 这是偶数！`)   // `是反引号
+            }else{
+                alert(`${num} 这是奇数！`)
+            }
+        }
+
+        /*
+        正常使用js的数据放入页面的时候需要自己手动拼接字符串的，现在es6提供了一种模板字符串解决了这个问题
+
+        模板字符串（ template string ）是增强版的字符串，用反引号（ ` ）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+
+        ps：反引号别告诉我不知道是啥，键盘一左边的按键
+        
+        在里面的变量写法不用再拼接了，只需要用${}来划定范围就行了,大括号内部可以放入任意的 JavaScript 表达式，可以进行运算，以及引用对象属性
+        */
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
